@@ -1,6 +1,6 @@
-#from django.urls import path, include
+from django.urls import path, include
+from .views import homepage
 
-
-#urlpatterns = [
-#    path('', include('filme.urls')),
-#]
+urlpatterns = [
+    path('', homepage),
+]
