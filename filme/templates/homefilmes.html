@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+HomeFilmes DjangoFLix
+{% endblock %}
+
+{% block content %}
+<div class="py-10 px-10">
+    <h1>Essa é homefilmes </h1>
+    {% for filme in object_list %}
+        <hr>
+        <p>{{ filme }}</p>
+        <p>{{ filme.descricao }}</p>
+        <img src="{{ filme.thumb.url }}">
+    {% endfor %}
+</div>
+{% endblock%}
